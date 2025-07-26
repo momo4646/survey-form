@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='styles.css'>
+    <title>Survey Form</title>
+  </head>
+
+  <body>
+    <h1 id='title'>Survey Form</h1>
+    <p id='description'>Please fill out the following survey.</p>
+    <form id='survey-form' method="POST">
+<!--User Information Section-->
+        <label for='name' id='name-label'>Name <input type='text' id='name' name='name' placeholder='John Doe' required /></label>
+        <label for='email' id='email-label'>Email <input type='email' id='email' name='email' placeholder='johndoe@gmail.com' required /></label>
+        <label for='number' id='number-label'>Age <input id='number' type='number'name='number' placeholder='18' min='18' max='120' /></label>
+
+<!--Experience Rating Section -->
+        <label for='experience-rating'>How has your experience been?
+          <select id='dropdown'>
+            <option value=''>(Select Option)</option>
+            <option value='1'>Bad</option>
+            <option value='2'>Okay</option>
+            <option value='3'>Amazing</option>
+          </select>
+        </label>
+<!--Preferred View Section -->
+        <fieldset>
+          <legend>Do you prefer mobile or desktop view?</legend>
+          <label for='desktop-view'><input type='radio' id='desktop-view' value='desktop-view' class='inline' name='view-preference' checked /> Desktop View</label>
+          <label for='mobile-view'><input type='radio' id='mobile-view' class='inline' name='view-preference' value='mobile-view' /> Mobile View</label>
+        </fieldset>
+<!--Best Features Section-->
+        <fieldset>
+          <legend>Which features were most helpful?</legend>
+          <label for='video-feature'><input type='checkbox' id='video-feature' name='useful-features' value='video-feature'class='inline'/> Video Crash Course</label>
+          <label for='flashcards-feature'><input type='checkbox' id='flashcards-feature' name='useful-features' value='flashcards-feature' class='inline'/> Flash Cards</label>
+          <label for='test-feature'><input type='checkbox' id='test-feature' name='useful-features' value='test-feature' class='inline'/> Practice Tests</label>
+        </fieldset>
+<!--Additional comments section-->
+        <label for='additional-comment'>Place additional comments here: <textarea id='additional-comment' placeholder='My favorite and worst part of using this website was...' rows='5' ></textarea>
+        <input type='submit' id='submit'>
+    </form>
+
+  </body>
+</html>
